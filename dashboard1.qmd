@@ -1,5 +1,86 @@
 ---
-title: "dashboard1"
+title: "Dashboard Layouts"
 format: dashboard
 ---
+```{r}
+#install.packages(c("tidyverse", "palmerpenguins", "gt"))
+library(tidyverse)
+library(palmerpenguins)
+library(gt)
+```
+
+
+
+# Default (rows)
+
+## Row {height=50%}
+
+```{r}
+
+topRow<-"Some content here"
+
+topRow
+
+```
+
+
+
+## Row {height=50%}
+
+::: {.card title="My Title"}
+This text will be displayed within a card. Can you put code in a card? Yes, you can.
+
+
+```{r}
+plot(mtcars)
+```
+
+
+:::
+
+```{r}
+plot(mtcars)
+```
+
+
+# Plots
+
+## Row {height="75%"}
+
+### Column {width="75%"}
+```{r}
+#| title: Penguins mass by flipper length
+ggplot(data=penguins)+
+  geom_point( mapping=aes(x=body_mass_g, y=flipper_length_mm, color=species))+
+  labs(title="Body Mass By Flipper Length", x="Mass (g)", y="Flipper Length (mm)")
+
+
+
+```
+
+### Column {width="25%"}
+
+::: {.card title="another title"}
+Some Text
+
+:::
+
+
+## Row {height="25%"}
+```{r}
+
+
+penguins |>
+  group_by(island) |>
+  summarize(AvgMass=mean(body_mass_g, na.rm=TRUE)) |>
+  gt()
+  
+
+
+```
+
+
+
+
+
 

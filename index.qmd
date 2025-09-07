@@ -6,3 +6,7 @@ format: html
 Basic Dashboard Layout:
 
 [dashboard 1](dashboard1.qmd)
+
+Observable Dashboard w/Penguins:
+
+[dashboard 2](dashboard2.qmd)

@@ -1,0 +1,47 @@
+---
+title: "dashboard2"
+format: 
+  dashboard:
+    orientation: columns
+---
+```{r}
+
+library(tidyverse)
+library(palmerpenguins)
+write_csv(penguins, "penguins.csv")
+
+```
+
+## Column {width="60%"}
+
+### Row {heigth="15%"}
+
+```{ojs}
+data = FileAttachment("penguins.csv").csv()
+
+viewof radios = Inputs.radio(data.map(d=>d.species), {label: "Select one", value: "Adelie", unique: true})
+
+```
+
+### Row {height="85%"}
+
+```{ojs}
+
+
+
+
+Plot.plot({
+  y: {grid: true},
+  color: {legend: true},
+  title: "Distribution of body mass, "+radios+" penguins",
+  marks: [
+    Plot.rectY(data.filter(d=>d.species === radios), Plot.binX({y: "count"}, {x: "body_mass_g"})),
+    Plot.ruleY([0]),
+  ]
+})
+
+
+```
+
+
+

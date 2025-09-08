@@ -7,6 +7,8 @@ Basic Dashboard Layout:
 
 [dashboard 1](dashboard1.qmd)
 
+[Value Boxes](valueBoxes.qmd)
+
 Observable Dashboard w/Penguins:
 
 [dashboard 2](dashboard2.qmd)

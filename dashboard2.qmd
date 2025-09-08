@@ -37,7 +37,8 @@ Plot.plot({
   marks: [
     Plot.rectY(data.filter(d=>d.species === radios), Plot.binX({y: "count"}, {x: "body_mass_g"})),
     Plot.ruleY([0]),
-  ]
+  ],
+  height: 400
 })
 
 

@@ -4,6 +4,27 @@
     "href": "index.html",
     "title": "index",
     "section": "",
-    "text": "Basic Dashboard Layout:\ndashboard 1"
+    "text": "Basic Dashboard Layout:\ndashboard 1\nValue Boxes\nObservable Dashboard w/Penguins:\ndashboard 2"
+  },
+  {
+    "objectID": "valueBoxes.html",
+    "href": "valueBoxes.html",
+    "title": "valueBoxes",
+    "section": "",
+    "text": "$icon\n[1] \"wrench\"\n\n$color\n[1] \"success\"\n\n$value\n[1] 344\n\n\n\n\n$icon\n[1] \"cake\"\n\n$color\n[1] \"blue\"\n\n$value\n[1] Biscoe\nLevels: Biscoe Dream Torgersen\n\n\n\n\n$icon\n[1] \"pin-map\"\n\n$color\n[1] \"yellow\"\n\n$value\n[1] Chinstrap\nLevels: Adelie Chinstrap Gentoo\n\n\n\n\n$icon\n[1] \"rulers\"\n\n$color\n[1] \"green\"\n\n$value\n[1] Adelie\nLevels: Adelie Chinstrap Gentoo"
+  },
+  {
+    "objectID": "valueBoxes.html#row",
+    "href": "valueBoxes.html#row",
+    "title": "valueBoxes",
+    "section": "",
+    "text": "$icon\n[1] \"wrench\"\n\n$color\n[1] \"success\"\n\n$value\n[1] 344\n\n\n\n\n$icon\n[1] \"cake\"\n\n$color\n[1] \"blue\"\n\n$value\n[1] Biscoe\nLevels: Biscoe Dream Torgersen\n\n\n\n\n$icon\n[1] \"pin-map\"\n\n$color\n[1] \"yellow\"\n\n$value\n[1] Chinstrap\nLevels: Adelie Chinstrap Gentoo\n\n\n\n\n$icon\n[1] \"rulers\"\n\n$color\n[1] \"green\"\n\n$value\n[1] Adelie\nLevels: Adelie Chinstrap Gentoo"
+  },
+  {
+    "objectID": "valueBoxes.html#row-1",
+    "href": "valueBoxes.html#row-1",
+    "title": "valueBoxes",
+    "section": "Row",
+    "text": "Row"
   }
 ]

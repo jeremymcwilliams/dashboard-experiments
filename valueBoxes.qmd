@@ -1,0 +1,123 @@
+---
+title: "valueBoxes"
+format: dashboard
+---
+
+```{r}
+#| label: load-libraries
+
+#install.packages("tidyverse")
+#install.packages("palmerpenguins")
+library(tidyverse)
+library(palmerpenguins)
+
+```
+
+
+```{r}
+#| label: calcutate-variables
+
+total=nrow(penguins)
+
+
+```
+
+
+## Row {height=30%}
+
+```{r}
+#| content: valuebox
+#| title: Total Penguins
+
+list(
+  icon="wrench",
+  color="success",
+  value=total
+)
+
+
+```
+
+
+```{r}
+#| content: valuebox
+#| title: Most populated island
+
+popByIsland<-penguins |>
+  group_by(island) |>
+  summarize(total=n()) |>
+  arrange(desc(total))
+
+most<-popByIsland$island[1]
+
+list(icon="cake",
+     color="blue",
+    value=most)
+
+```
+
+```{r}
+#| content: valuebox
+#| title: Heaviest penguins
+
+byMass<-penguins |>
+  group_by(species) |>
+  summarize(avgMass=mean(body_mass_g), na.rm=TRUE) |>
+  arrange(desc(avgMass))
+
+heaviest<-byMass$species[1]
+
+list(icon="pin-map",
+     color="yellow",
+     value=heaviest)
+
+
+
+
+```
+
+```{r}
+#| content: valuebox
+#| title: Smallest flippers 
+
+
+smallFlippers<-penguins |>
+  group_by(species) |>
+  summarize(avgFlipperLength=mean(flipper_length_mm, na.rm=TRUE)) |>
+  arrange(avgFlipperLength)
+
+shortestFlippers<-smallFlippers$species[1]
+
+list(
+  icon="rulers",
+  color="green",
+  value=shortestFlippers
+  
+  
+)
+
+
+
+
+```
+
+
+
+## Row {height=70%}
+
+
+```{r}
+#| title: Flipper Length by Mass
+
+penguins |> ggplot(mapping=aes(x=body_mass_g, y=flipper_length_mm))+
+  geom_point(mapping=aes(color=species))+
+  labs(x="Body Mass (g)", y="Flipper Length (mm)", title="Flipper Length by Body Mass")
+
+
+
+```
+
+
+
+
+
